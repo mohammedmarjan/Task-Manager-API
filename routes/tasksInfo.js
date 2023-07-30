@@ -38,7 +38,7 @@ taskRoutes.get('/:id', (req, res) => {
 })
 
 // GET /tasks/priority/:level: Retrieve tasks based on priority level
-app.get('/priority/:level', (req, res) => {
+taskRoutes.get('/priority/:level', (req, res) => {
     const { level } = req.params;
     const priorityLevel = level.toLowerCase();
     const tasksWithPriority = tasks.filter((task) => task.priority.toLowerCase() === priorityLevel);
