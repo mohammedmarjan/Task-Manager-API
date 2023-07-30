@@ -54,7 +54,7 @@ taskRoutes.post('/', (req, res) => {
         });
     }
     
-    const { title, description, completed } = req.body;
+    const { title, description, completed, priority} = req.body;
     const newTask = {
         id: uuidv4(),
         title,
