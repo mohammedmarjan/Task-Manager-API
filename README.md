@@ -74,10 +74,11 @@ Request Body:
   "priority": "medium"
 }
 
-PUT /tasks/:id
+### PUT /tasks/:id
 Update an existing task by its ID.
 
 Request Body:
+```json
 {
   "title": "Updated Task",
   "description": "This is an updated task.",
@@ -85,10 +86,10 @@ Request Body:
   "priority": "high"
 }
 
-DELETE /tasks/:id
+### DELETE /tasks/:id
 Delete a task by its ID.
 
-GET /tasks/priority/:level
+### GET /tasks/priority/:level
 Retrieve tasks based on priority level.
 
 Request and Response Examples
