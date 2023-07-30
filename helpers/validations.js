@@ -1,11 +1,17 @@
 const isValidRequest = function(reqBody) {
-    const { title, description, completed } = reqBody;
+    try {
+        const { title, description, completed, priority } = req.body;
 
-    // Input validation
-    if (!title || !description || completed === undefined || typeof completed !== 'boolean' || !priority) {
-        return res.status(400).json({ error: 'Invalid input' });
-      }
-    return true;
+        // Input validation
+        if (!title || !description || completed === undefined || typeof completed !== 'boolean' || !priority) {
+            return false
+        }
+        return true;
+    } catch (error) {
+        console.error(error)
+        return false
+    }
+
 }
 
 module.exports = { isValidRequest }
