@@ -1,6 +1,6 @@
-# Task Management API
+# Task Manager API
 
-This is a simple Task Management API that allows users to manage tasks. The API supports CRUD (Create, Read, Update, Delete) operations for tasks, along with filtering, sorting, and priority level assignment.
+This is a simple Task Manager API that allows users to manage tasks. The API supports CRUD (Create, Read, Update, Delete) operations for tasks, along with filtering, sorting, and priority level assignment.
 
 ## Table of Contents
 
@@ -8,8 +8,6 @@ This is a simple Task Management API that allows users to manage tasks. The API 
 - [Usage](#usage)
 - [Endpoints](#endpoints)
 - [Request and Response Examples](#request-and-response-examples)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
@@ -17,19 +15,19 @@ This is a simple Task Management API that allows users to manage tasks. The API 
 
 2. Clone this repository:
 
-git clone https://github.com/your-username/task-api.git
-cd task-api
-
+    ```
+    git clone https://github.com/mohammedmarjan/Task-Manager-API.git
+    ```
 
 3. Install dependencies:
-
-npm install
-
+    ```
+    npm install
+    ```
 
 4. Start the server:
-
-npm start
-
+    ````
+    node app.js
+    ````
 
 The server will run on http://localhost:3000 by default. You can change the port in the `app.js` file if needed.
 
@@ -73,6 +71,7 @@ Request Body:
   "completed": false,
   "priority": "medium"
 }
+```
 
 ### PUT /tasks/:id
 Update an existing task by its ID.
@@ -85,6 +84,7 @@ Request Body:
   "completed": true,
   "priority": "high"
 }
+```
 
 ### DELETE /tasks/:id
 Delete a task by its ID.
@@ -92,5 +92,5 @@ Delete a task by its ID.
 ### GET /tasks/priority/:level
 Retrieve tasks based on priority level.
 
-Request and Response Examples
+## Request and Response Examples
 See the Endpoints section for request and response examples for each endpoint.
